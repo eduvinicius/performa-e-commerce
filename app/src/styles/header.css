@@ -1,0 +1,152 @@
+.header-shipment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black-color);
+    height: 32px;
+}
+
+.header-shipment-description {
+    color: var(--white-color);
+    font-size: 12px;
+}
+
+.shipment-description span {
+    font-weight: bold;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--white-color2);
+}
+
+.nav-header-list {
+    display: flex;
+    align-items: center;
+    margin: 1em;
+    gap: 2em;
+}
+
+.nav-header-list-item {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--black-color);
+}
+
+.nav-header-search-list {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    margin-right: 1em;
+}
+
+.nav-header-search-input {
+    background: var(--gray-light-color);
+    width: 264px;
+    height: 32px;
+    border: none;
+}
+
+.nav-header-search-quantity {
+    padding: 3px;
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    top: 7.5%;
+    right: 1%;
+    background-color: var(--light-red-color);
+    border-radius: 15px;
+    color: var(--white-color);
+}
+
+.nav-header-search-quantity-none {
+    display: none;
+}
+
+.nav-header-search-icon {
+    position: absolute;
+    left: 88%;
+    right: 18.75%;
+    top: 9.75%;
+}
+
+.nav-header-search-btn {
+    background: none;
+    border: none;
+}
+
+
+@media screen and (max-width: 600px) {
+
+        .nav-header-list-item,
+        .nav-header-search-input
+         {
+            display: none;
+        }
+    
+        .nav-header-search-list{
+            gap: 1em
+        }
+    
+        .nav-header-search-profile-img {
+            content: url('../images/icons8-sacola-de-compras-32.png');
+        }
+    
+        .nav-header-search-shop-bag {
+            content: url('../images/icons8-espessura-da-linha-16.png');
+        }
+    
+        .nav-header-search-icon {
+            position: inherit;
+        }
+
+}
+
+@media screen and (max-width: 900px) and (min-width: 601px) {
+
+    .nav-header-item,
+    .list-search-container-input
+     {
+        display: none;
+    }
+
+    .nav-header-search-list {
+        gap: 1em
+    }
+
+    .nav-header-search-profile-img {
+        content: url('../images/icons8-sacola-de-compras-32.png');
+    }
+
+    .nav-header-search-shop-bag {
+        content: url('../images/icons8-espessura-da-linha-16.png');
+    }
+
+    .nav-header-search-icon {
+        position: inherit;
+    }
+
+}
+
+@media screen and (max-width: 1024px) and (min-width: 901px) {
+
+    .nav-header-img {
+        width: 130px;
+    }
+
+    .nav-header-item {
+        font-size: 11px;
+        font-weight: bold;
+    }   
+
+    .nav-header-search-input {
+        width: 180px;
+    }
+
+    .nav-header-search-icon {
+        left: 82.70%;
+        right: 15.75%;
+        top: 3.92%;
+    }
+}

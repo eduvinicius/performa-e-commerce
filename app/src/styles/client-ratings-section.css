@@ -1,0 +1,305 @@
+.client-ratings-title {
+    text-align: center;
+    margin: 1em 0;
+}
+
+.client-ratings-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.client-ratings-all-rating {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: .5em;
+    margin-left: 2em;
+    border-bottom: 2px solid var(--grayd2-color);
+}
+
+.stars-rating {
+    display: flex;
+    gap: .5em;
+}
+
+.client-ratings-container {
+    display: flex;
+    flex-direction: row;
+}
+  
+  .client-ratings {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid var(--graycc-color);
+}
+  
+  .client-doubts {
+    flex: 1;
+    padding: 20px;
+}
+  
+  .client-ratings-container-box {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.client-ratings-all {
+    display: flex;
+    justify-content: center;
+    margin: .5em 0;
+    gap: .5em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid var(--graycc-color);
+}
+
+.clients-rating-comments-name-stars {
+    display: flex;
+    margin-top: 1em;
+    gap: 2em;
+}
+
+.clients-rating-comments-name {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.clients-stars-list {
+    display: flex;
+    gap: .5em;
+}
+
+.clients-stars-item {
+    font-size: 13px;
+}
+  
+.clients-rating-comments-container {
+    display: flex;
+    margin-top: 1em;
+    gap: 2em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid var(--graycc-color);
+}
+
+.clients-rating-comments-description {
+    font-size: 12px; 
+}
+
+
+.clients-rating-comments-description img {
+    float: left;
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+  }
+
+.clients-rating-comments-comment {
+    display: flex;
+    flex-direction: column;
+    gap: .5em
+}
+
+.clients-rating-comments-comment-description {
+    text-align: justify;
+    font-size: 12px;
+}
+
+.clients-rating-comments-pages-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    gap: 1em;
+}
+
+.clients-rating-comments-pages-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    padding: .3em .4em;
+    background-color: var(--white-color2)
+}
+
+.clients-rating-comments-pages-item-n2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    padding: .3em .4em;
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+.client-ratings-rate-button {
+    margin-top: 2em;
+    padding: .5em 6em;
+    font-weight: bold;
+    border: 1px solid var(--black-color);
+    text-align: center;
+    cursor: pointer;
+}
+
+.client-doubts-description {
+    font-size: 14px;
+}
+
+.client-doubts-input {
+    width: 591px;
+    height: 50px;
+    margin-top: 1em;
+    background-color: var(--grayd2-color);
+    border: 1px solid var(--grayd2-color);
+}
+
+.client-doubts-rate-button {
+    margin-top: 1em;
+    padding: .5em 6em;
+    font-weight: bold;
+    border: 1px solid var(--black-color);
+    text-align: center;
+    cursor: pointer;
+}
+
+.client-doubt {
+    text-align: left;
+    margin-top: 2em;
+}
+
+.client-doubt-store-container {
+    margin-top: 2em;
+}
+
+.client-doubt-name {
+    font-weight: bold;
+}
+
+.client-doubt-store-name {
+    margin-left: 1em;
+    margin-top: 1.2em;
+    font-weight: bold;
+    font-size: 13px;
+}
+.client-doubt-description {
+    text-align: center;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    font-size: 13px;
+}
+
+.client-rating {
+    text-align: center;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    font-size: 13px;
+}
+
+.client-doubt-vertical-line {
+    transform: rotate(90deg); 
+    border: none; 
+    border-top: 1px solid var(--black-color); 
+    width: 22px;
+}
+
+
+@media screen and (max-width: 600px) {
+    
+    .client-ratings-all {
+        gap: .3em;
+    }
+
+    .client-ratings-all li {
+        font-size: 13px;
+    }
+
+    .client-ratings-container {
+        flex-direction: column;
+    }
+
+    .client-doubts-input {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 601px) {
+    
+    .client-ratings-all {
+        gap: .3em;
+    }
+
+    .client-ratings-all li {
+        font-size: 13px;
+    }
+
+    .client-doubts-input {
+        width: 200px;
+    }
+
+    .clients-rating-comments-name-stars {
+        flex-direction: column;
+        text-align: left;
+        gap: 1.5em;
+    }
+
+    .clients-rating-comments-container {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .clients-rating-comments-description {
+        text-align: left;
+    }
+    
+
+    .client-doubts-input {
+        width: 250px;
+    }
+
+    .client-doubt-description {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 901px) {
+    
+    .client-ratings-all {
+        gap: .3em;
+    }
+
+    .client-ratings-all li {
+        font-size: 13px;
+    }
+
+    .client-doubts-input {
+        width: 200px;
+    }
+
+    .clients-rating-comments-name-stars {
+        flex-direction: column;
+        text-align: left;
+        gap: 1.5em;
+    }
+
+    .clients-rating-comments-container {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .clients-rating-comments-description {
+        text-align: left;
+    }
+    
+
+    .client-doubts-input {
+        width: 250px;
+    }
+
+    .client-doubt-description {
+        text-align: left;
+    }
+}

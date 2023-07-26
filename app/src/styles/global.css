@@ -1,0 +1,53 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black-color);
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--gray-color);
+}
+
+button {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.show-nav {
+    display: block;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: var(--white-color);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--black-color);
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+

@@ -1,0 +1,111 @@
+.suggestion-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.suggestion-container {
+    margin: 1em;
+}
+.suggestion-container h3 {
+    font-size: 22px;
+}
+
+.suggestion-container button {
+    font-weight: 400;
+    background-color: var(--grayd2-color);
+    padding: .5em 1em;
+    border: none;
+}
+
+.suggestion-itens-list {
+    display: flex;
+    gap: 1em;
+    margin-left: 2em;
+    overflow-x: scroll;
+}
+
+.suggestion-itens-list li {
+    background: var(--whitef8-color);
+    cursor: pointer;
+}
+
+.suggestion-itens-list-title {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.suggestion-itens-list-price {
+    display: flex;
+    column-gap: 10px;
+}
+
+.suggestion-itens-oldPrice {
+    text-decoration: line-through;
+}
+
+.suggestion-itens-actualPrice {
+    font-weight: bold;
+}
+
+.suggestion-itens-rectangles {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+@media screen and (max-width: 600px) {
+
+    .suggestion-itens-list li:not(:last-child) {
+        display: block;
+    }
+
+    .suggestion-itens-list li:first-child ~ li {
+        display: none;
+    }
+
+    .suggestion-itens-list {
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 900px) and (min-width: 601px) {
+
+    .suggestion-itens-list li:not(:nth-child(-n+3)) {
+        display: none;
+    }
+
+    .suggestion-itens-list {
+        justify-content: center;
+        gap: .3em;
+    }
+
+    .suggestion-itens-list li {
+        font-size: 14px;
+    }
+
+    .suggestion-itens-list img {
+        width: 230px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) and (min-width: 901px) {
+
+    .suggestion-itens-list li:not(:nth-child(-n+4)) {
+        display: none;
+    }
+
+    .suggestion-itens-list {
+        justify-content: center;
+        gap: .3em;
+    }
+
+    .suggestion-itens-list li {
+        font-size: 14px;
+    }
+
+    .suggestion-itens-list img {
+        width: 210px;
+    }
+}

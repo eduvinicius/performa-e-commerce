@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./icons/e-commerce.png">
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=
+        Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=
+        Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=
+        Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Outfit&family=
+        Raleway:wght@400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" 
+        rel="stylesheet"
+    >
+    <title>Performa e-commerce</title>
+</head>
+<body>
+    <header>
+        <div class="header-shipment">
+            <p class="header-shipment-description">FRETE GRÁTIS ACIMA DE <span>R$199</span></p>
+        </div>
+        <nav class="nav-header">
+            <ul class="nav-header-list">
+                <li>
+                    <img
+                        class="nav-header-img"  
+                        src="./images/performalogo.png" 
+                        src="Performa Logo" 
+                    />
+                </li>
+                <li class="nav-header-list-item"><a href="">ROUPAS</a></li>
+                <li class="nav-header-list-item"><a href="">SAPATOS</a></li>
+                <li class="nav-header-list-item"><a href="">ACESSÓRIOS</a></li>
+                <li class="nav-header-list-item"><a href="">CASA E CUIDADO</a></li>
+                <li class="nav-header-list-item"><a href="">BAZAR</a></li>
+            </ul>
+            <ul class="nav-header-search-list">
+                <li>
+                    <input class="nav-header-search-input" placeholder="Digite sua busca aqui" />
+                    <img class="nav-header-search-icon" src="./images/search.png" alt="search" />
+                </li>
+                <li><img class="nav-header-search-profile-img" src="./images/Vector.png" alt="profile" /></li>
+                <li>
+                    <button class="nav-header-search-btn">
+                        <img 
+                        class="nav-header-search-shop-bag" 
+                        src="./icons/bag.png" alt="shop" 
+                        />
+                    </button>
+                    <span 
+                        class="nav-header-search-quantity nav-header-search-quantity-none"
+                        >
+                        0
+                    </span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="overlay"></div>
+        <div class="side-nav">
+            <div class="side-nav-top">
+                <ul class="side-nav-top-bag">
+                    <li>
+                        <img 
+                            class="nav-header-search-shop-bag" 
+                            src="./icons/bag.png" alt="shop"
+                             
+                        >
+                        <span 
+                        class="side-nav-top-bag-qty hidden"
+                        >
+                        0
+                    </span>
+                    </li>
+                    <li>
+                        <p class="side-nav-top-bag-title">MINHA SACOLA</p>
+                    </li>
+                </ul>
+                <button class="side-nav-top-close">
+                    <img src="./images/ico-fechar-hover.png" alt="Fechar" class="side-nav-top-close-img">
+                </button>
+            </div>
+
+            <div class="side-nav-no-itens">
+                <div class="side-nav-no-itens-content">
+                    <img src="./icons/bag.png" alt="Sacola" class="side-nav-no-itens-content-img">
+                    <h1 class="side-nav-no-itens-content-title">Você não possui itens</h1>
+                    <p class="side-nav-no-itens-content-desc">
+                        Continue navegando para adicionar produtos aqui
+                    </p>
+                    <button class="side-nav-no-itens-content-btn">
+                        Continuar Navegando
+                    </button>
+                </div>
+            </div>
+
+            <div class="side-nav-itens">
+                <ul class="side-nav-itens-list"></ul>
+                <div class="side-nav-itens-info">
+                    <div class="side-nav-itens-info-subtotal">
+                        <p class="side-nav-itens-info-subtotal-desc">Subtotal:</p>
+                        <p class="side-nav-itens-info-subtotal-price">
+                            R$ <span class="side-nav-itens-info-subtotal-price-span"></span>
+                        </p>
+                    </div>
+                    <div class="side-nav-itens-info-finish">
+                        <p class="side-nav-itens-info-finish-desc">Frete, e descontos calculados no carrinho</p>
+                        <button class="side-nav-itens-info-finish-btn-continue">CONTINUAR COMPRANDO</button>
+                        <button class="side-nav-itens-info-finish-btn">FINALIZAR COMPRA</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="nav-main-container">
+            <ul class="nav-main-list">
+                <li>Home ></li>
+                <li>Roupas ></li>
+                <li class="nav-main-list-shirts">Camisetas</li>
+            </ul>
+        </nav>
+
+        <!--Conteúdo que mostra as camisetas-->
+
+        <section class="main-shirt-container">
+            <ul class="main-shirt-container-shirts-list">
+                <li><img class="main-shirt-container-shirts-list-item" src="./images/shirt-list-img.png" /></li>
+                <li><img class="main-shirt-container-shirts-list-item" src="./images/shirt-list-img.png" /></li>
+                <li><img class="main-shirt-container-shirts-list-item" src="./images/shirt-list-img.png" /></li>
+                <li><img class="main-shirt-container-shirts-list-item" src="./images/shirt-list-img.png" /></li>
+            </ul>
+            <div class="main-shirt-img-container">
+                <img class="main-shirt-img" src="./images/shirtli2.png" alt="shirt image" />           
+            </div>            
+            <div class="main-shirt-information-container">
+                <h3 class="main-shirt-information-title">CASACO JUMPING BEAR</h3>
+                <p class="main-shirt-information-ref">
+                    REF:<span class="main-shirt-information-ref-span">104893</span>
+                </p><br>
+                <p class="main-shirt-information-price"> 
+                    <span class="main-shirt-information-span1">de R$ 499,00</span> 
+                    R$<span class="main-shirt-information-span2">349,93</span> 
+                </p>
+                <p class="main-shirt-information-installment">ou 3x de R$ 116,64</p><br>
+                <div class="main-shirt-information-second-container">
+                    <p class="main-shirt-information-second-description">Escolha o Tamanho</p>
+                    <button class="main-shirt-information-second-button">Guia de Medidas</button>
+                </div>
+                <ul class="main-shirt-information-sizes-list">
+                    <li><button class="shirt-size-btn">UN</button></li>
+                    <li><button class="shirt-size-btn">P</button></li>
+                    <li><button class="shirt-size-btn">M</button></li>
+                    <li><button class="shirt-size-btn">G</button></li>
+                    <li><button class="shirt-size-btn">GG</button></li>
+                    <li><button class="shirt-size-btn">EG</button></li>
+                </ul><br>
+                <p>Escolha a cor</p>
+                <ul class="main-shirt-information-colors-list">
+                    <li class="main-shirt-information-color-black shirt-color" data-color="preto"></li>
+                    <li class="main-shirt-information-color-yellow shirt-color" data-color="amarelo"></li>
+                    <li class="main-shirt-information-color-red shirt-color" data-color="vermelho"></li>
+                    <li class="main-shirt-information-color-blue shirt-color" data-color="azul"></li>
+                    <li class="main-shirt-information-color-lightBlue shirt-color" data-color="azul claro"></li>
+                    <li class="main-shirt-information-color-green shirt-color" data-color="verde"></li>
+                    <li class="main-shirt-information-color-orange shirt-color" data-color="laranja"></li>
+                    <li class="main-shirt-information-color-lightBrown shirt-color" data-color="marrom claro"></li>
+                    <li class="main-shirt-information-color-brown shirt-color" data-color="marrom"></li>
+                    <li class="main-shirt-information-color-white shirt-color" data-color="branco"></li>
+                </ul>
+                <button class="main-shirt-information-buyButton">COMPRAR</button>
+                <div class="main-shirt-information-shipment-container">
+                    <p class="main-shirt-information-shipment-title">Calcule o valor do frete</p>
+                    <form class="main-shirt-information-shipment-form">
+                        <input class="main-shirt-information-shipment-input" type="number" required /> 
+                        <input
+                            class="main-shirt-information-shipment-submit"
+                            type="submit"
+                            value="OK"
+                            />
+                    </form>
+                    <p class="main-shirt-information-shipment-calc-ship"></p>
+                    <p>
+                        <a 
+                            href="https://buscacepinter.correios.com.br/app/endereco/index.php" 
+                            class="main-shirt-information-shipment-cep"
+                            target="_blank">
+                            Não sei o meu cep
+                        </a>
+                    </p>
+                </div>
+                <div class="main-shirt-information-details">
+                    <h4>DESCRIÇÃO E DETALHES</h4>
+                    <button class="main-shirt-information-details-btn-show">
+                        <img src="./images/icons8-soma-24.png" alt="plus" />                            
+                    </button>
+                    <button class="main-shirt-information-details-btn-hidden hidden">
+                        <img src="./images/minussymbol.png" alt="plus" />                            
+                    </button>
+                </div>
+                <div class="main-shirt-information-details-desc hidden">
+                    <p>
+                        Lorem ipsum dolor sit amet, <br>
+                        consectetur adipiscing elit. Etiam lacus mi, <br>
+                        egestas et suscipit quis, mattis eget tellus. Maecenas <br> 
+                        tempor blandit e.
+                    </p>
+                </div>
+                <div class="main-shirt-information-rating">
+                    <ul class="main-shirt-information-rating-list">
+                        <li>
+                            <img src="./images/star.png" alt="star" />
+                        </li>
+                        <li>
+                            <img src="./images/star.png" alt="star" />
+                        </li>
+                        <li>
+                            <img class="star" src="./images/icons8-estrela-meio-vazia-30.png" alt="star" />
+                        </li>
+                        <li>
+                            <img src="./images/star (1).png" alt="star" />
+                        </li>
+                        <li>
+                            <img src="./images/star (1).png" alt="star" />
+                        </li>
+                    </ul>
+                    <p>30 avaliações</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="suggestion-container">
+            <h3>VOCÊ TAMBÉM PODE GOSTAR</h3>
+            <button>ver tudo</button>
+        </div>
+
+        <section class="suggestion-itens">
+            <ul class="suggestion-itens-list"></ul>
+            <ul class="suggestion-itens-rectangles">
+                <li><img src="./images/Rectangle 134.png" alt="rectangle" /></li>
+                <li><img src="./images/Rectangle 135.png" alt="rectangle" /></li>
+                <li><img src="./images/Rectangle 134.png" alt="rectangle" /></li>
+            </ul>
+        </section>
+
+        <h2 class="client-ratings-title">AVALIAÇÕES SOBRE ESTE PRODUTO</h2>
+
+        <section class="client-ratings-container">
+            <section class="client-ratings">
+              <div class="client-ratings-container-box">
+                <!-- conteúdo do primeiro container -->
+                <h4>Avaliações</h4>
+                <ul class="client-ratings-all">
+                    <li>
+                        <img src="./images/star.png" alt="star" />
+                    </li>
+                    <li>
+                        <img src="./images/star.png" alt="star" />
+                    </li>
+                    <li>
+                        <img src="./images/star.png" alt="star" />
+                    </li>
+                    <li>
+                        <img src="./images/star.png" alt="star" />
+                    </li>
+                    <li>
+                        <img src="./images/star (1).png" alt="star" />
+                    </li>
+                    <li>
+                        Baseado em 56 avaliações
+                    </li>
+                </ul>
+                <ul class="clients-rating-comments">
+                    <li>
+                        <div class="clients-rating-comments-name-stars">
+                            <p class="clients-rating-comments-name">
+                                Nome cliente
+                            </p>
+                            <ul class="clients-stars-list">
+                                <li class="clients-stars-item">
+                                    <img src="./images/star.png" alt="star" />
+                                </li>
+                                <li class="clients-stars-item">
+                                    <img src="./images/star.png" alt="star" />
+                                </li>
+                                <li class="clients-stars-item">
+                                    <img src="./images/star.png" alt="star" />
+                                </li>
+                                <li class="clients-stars-item">
+                                    <img src="./images/star.png" alt="star" />
+                                </li>
+                                <li class="clients-stars-item">
+                                    <img src="./images/star (1).png" alt="star" />
+                                </li>
+                                <li class="clients-stars-item">
+                                    Há 6 mes(es)
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clients-rating-comments-container">
+                            <p class="clients-rating-comments-description">
+                                <img src="./images/positive-sign.png" alt="positive" />
+                                Compra Verificada
+                            </p>
+                            <div class="clients-rating-comments-comment">
+                                <p class="clients-rating-comments-comment-description" >
+                                    Lorem ipsum dolor sit amet, 
+                                    consectetur adipiscing elit. Etiam lacus mi, 
+                                    egestas et suscipit quis, mattis eget tellus. Maecenas 
+                                    tempor blandit e.
+                                </p>
+                                <p class="clients-rating-comments-comment-description">
+                                    <img src="./images/positive-sign.png" alt="positive" />
+                                    Sim, recomendaria este produto a um amigo
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="clients-rating-comments-name-stars">
+                            <p class="clients-rating-comments-name">
+                                Nome cliente
+                            </p>
+                            <ul class="clients-stars-list">
+                                <li class="clients-stars-item">
+                                    <img src="./images/star.png" alt="star" />
+                                </li>
+                                <li class="clients-stars-item">
+                                    <img src="./images/star.png" alt="star" />
+                                </li>
+                                <li class="clients-stars-item">
+                                    <img src="./images/star.png" alt="star" />
+                                </li>
+                                <li class="clients-stars-item">
+                                    <img src="./images/star.png" alt="star" />
+                                </li>
+                                <li class="clients-stars-item">
+                                    <img src="./images/star (1).png" alt="star" />
+                                </li>
+                                <li class="clients-stars-item">
+                                    Há 6 mes(es)
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clients-rating-comments-container">
+                            <p class="clients-rating-comments-description">
+                                <img src="./images/positive-sign.png" alt="positive" />
+                                Compra Verificada
+                            </p>
+                            <div class="clients-rating-comments-comment">
+                                <p class="clients-rating-comments-comment-description" >
+                                    Lorem ipsum dolor sit amet, 
+                                    consectetur adipiscing elit. Etiam lacus mi, 
+                                    egestas et suscipit quis, mattis eget tellus. Maecenas 
+                                    tempor blandit e.
+                                </p>
+                                <p class="clients-rating-comments-comment-description">
+                                    <img src="./images/positive-sign.png" alt="positive" />
+                                    Sim, recomendaria este produto a um amigo
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="clients-rating-comments-name-stars">
+                            <p class="clients-rating-comments-name">
+                                Nome cliente
+                            </p>
+                            <ul class="clients-stars-list">
+                                <li class="clients-stars-item">
+                                    <img src="./images/star.png" alt="star" />
+                                </li>
+                                <li class="clients-stars-item">
+                                    <img src="./images/star.png" alt="star" />
+                                </li>
+                                <li class="clients-stars-item">
+                                    <img src="./images/star.png" alt="star" />
+                                </li>
+                                <li class="clients-stars-item">
+                                    <img src="./images/star.png" alt="star" />
+                                </li>
+                                <li class="clients-stars-item">
+                                    <img src="./images/star (1).png" alt="star" />
+                                </li>
+                                <li class="clients-stars-item">
+                                    Há 6 mes(es)
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clients-rating-comments-container">
+                            <p class="clients-rating-comments-description">
+                                <img src="./images/positive-sign.png" alt="positive" />
+                                Compra Verificada
+                            </p>
+                            <div class="clients-rating-comments-comment">
+                                <p class="clients-rating-comments-comment-description" >
+                                    Lorem ipsum dolor sit amet, 
+                                    consectetur adipiscing elit. Etiam lacus mi, 
+                                    egestas et suscipit quis, mattis eget tellus. Maecenas 
+                                    tempor blandit e.
+                                </p>
+                                <p class="clients-rating-comments-comment-description">
+                                    <img src="./images/positive-sign.png" alt="positive" />
+                                    Sim, recomendaria este produto a um amigo
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="clients-rating-comments-pages-list">
+                    <li>
+                        <img src="./images/ico-arrow-left.png" alt="arrow-left" />
+                    </li>
+                    <li class="clients-rating-comments-pages-item">1</li>
+                    <li class="clients-rating-comments-pages-item-n2">
+                        2
+                    </li>
+                    <li class="clients-rating-comments-pages-item">3</li>
+                    <li class="clients-rating-comments-pages-item">4</li>
+                    <li class="clients-rating-comments-pages-item">5</li>
+                    <li>
+                        <img src="./images/ico-arrow-right.png" alt="arrow-right" />
+                    </li>
+                </ul>
+                <button class="client-ratings-rate-button">AVALIAR</button>
+              </div>
+            </section>
+
+            <section class="client-doubts">
+              <div class="client-ratings-container-box">
+                <!-- conteúdo do segundo container -->
+                <h4>Dúvidas</h4>
+                <p class="client-doubts-description">
+                    Tem alguma dúvida sobre este produto? 
+                    Pergunte ao lojista e a outros compradores
+                </p>
+                <form class="client-doubts-form">
+                    <input
+                        class="client-doubts-input"
+                        placeholder="Pergunte sobre o produto"
+                     />
+                     <button class="client-doubts-rate-button">PERGUNTAR</button>
+                </form>
+                 <div class="client-doubt">
+                    <p class="client-doubt-name">Nome cliente</p><br>
+                    <p class="client-doubt-description client-rating">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend dui eu 
+                        enim porttitor, vitae ultrices dolor aliquet. Pellentesque convallis, 
+                        ligula eu dictum bibendum, nibh neque aliquam enim, 
+                        ornare congue dui urna eget velit. 
+                    </p>
+                    <hr class="client-doubt-vertical-line">
+                
+                    <p class="client-doubt-store-name">Loja</p><br>
+                    <p class="client-doubt-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Integer eleifend dui eu enim porttitor, vitae ultrices dolor aliquet. 
+                        Pellentesque convallis, ligula eu dictum bibendum, nibh neque aliquam enim, 
+                        ornare congue dui urna eget velit. 
+                    </p>
+                 </div>
+                 <div class="client-doubt">
+                    <p class="client-doubt-name">Nome cliente</p><br>
+                    <p class="client-doubt-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend dui eu 
+                        enim porttitor, vitae ultrices dolor aliquet. Pellentesque convallis, 
+                        ligula eu dictum bibendum, nibh neque aliquam enim, 
+                        ornare congue dui urna eget velit. 
+                    </p>
+                    <hr class="client-doubt-vertical-line">
+                
+                    <p class="client-doubt-store-name">Loja</p><br>
+                    <p class="client-doubt-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Integer eleifend dui eu enim porttitor, vitae ultrices dolor aliquet. 
+                        Pellentesque convallis, ligula eu dictum bibendum, nibh neque aliquam enim, 
+                        ornare congue dui urna eget velit. 
+                    </p>
+                 </div>
+              </div>
+            </section>
+          </section>
+          
+          <nav class="footer-nav-container">
+              <div  class="footer-nav-list-newsletter">
+                  <ul>
+                      <li class="footer-nav-list-title">Newsletter</li>
+                      <li>
+                          Assine nossa newsletter e fique por dentro de nossas <br> ofertas e novidades
+                      </li>
+                      <li>
+                          <input class="footer-nav-list-input" placeholder="Informe seu Email" />
+                          <button class="footer-nav-list-button">ENVIAR</button>
+                      </li>
+                  </ul>
+                  <ul>
+                      <li class="footer-nav-list-title">Sobre</li>
+                      <li>Quem Somos</li>
+                      <li>Onde Encontrar</li>
+                      <li>Blog</li>
+                  </ul>
+                  <ul>
+                      <li class="footer-nav-list-title">Ajuda</li>
+                      <li>Pedidos</li>
+                      <li>Trocas e Devoluções</li>
+                      <li>FAQ</li>
+                      <li>Revenda</li>
+                  </ul>
+                  <ul class="footer-nav-list-socialmedia">
+                      <li class="footer-nav-list-title">Redes Sociais</li>
+                      <div class="socialmedia">
+                          <li><img src="./images/Facebook.png" alt="Facebook" /></li>
+                          <li><img src="./images/Instagram.png" alt="Instagram" /></li>
+                          <li><img src="./images/Spotify.png" alt="Instagram" /></li>
+                      </div>
+                  </ul>
+                  <ul class="footer-nav-list-security">
+                      <li class="footer-nav-list-title">Segurança</li>
+                      <div class="security-logos">
+                          <li><img src="./images/ebit.png" alt="Ebit" /></li>
+                          <li><img src="./images/yourviews.png" alt="Your Views" /></li>
+                      </div>
+                  </ul>
+              </div>
+          </nav>
+    </main>
+
+    <footer>
+        <div class="footer-last">
+            <div class="footer-last-title-container">
+                <div>
+                    <p>
+                        HERMOSO COMPADRE CONFECÇÃO LTDA - CNPJ 12.069.071/0001-20 | RUA ANTÔNIO ALVES TAVEIRA, 2160 
+                        - VILA TÓTOLI, FRANCA-SP - CEP 14409-123
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Tecnologia: VTEX
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="./scripts/main.js"></script>
+</body>
+</html>

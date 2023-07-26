@@ -1,0 +1,31 @@
+@import url('./global.css');
+@import url('./reset.css');
+@import url('./header.css');
+@import url('./main-shirt-section.css');
+@import url('./suggestion-section.css');
+@import url('./client-ratings-section.css');
+@import url('./footer.css');
+@import url('./cart.css');
+
+
+:root {
+    --black-color: #000000;
+    --white-color: #FFF;
+    --white-color2: #ECECEC;
+    --gray-light-color: #f2f2f2;
+    --gray-color: #484848;
+    --gray-color-c1: #c1c1c1;
+    --graycc-color: #ccc;
+    --grayd2-color: #d2d2d2;
+    --yellow-color: #E3C109;
+    --blue-color: #4176AB;
+    --red-color:   #C72E2E;
+    --light-red-color: #EC7646;
+    --green-color: #99C76B;
+    --lightblue-color: #B2D4E5;
+    --lightbrown-color: #BE5230;
+    --brown-color: #731A26;
+    --whiteeb-color: #EBEBEB;
+    --whitef8-color: #F8F8FA;
+    --orange-color: #FFA500;
+}
